@@ -10,7 +10,7 @@ load_dotenv()
 client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 app = FastAPI()
 
-def fetch_reddit_data(subreddit: str = "cscareerquestions", limit: int = 15) -> str:
+def fetch_reddit_data(subreddit: str = "AskReddit", limit: int = 15) -> str:
     """Fetches recent posts from a subreddit to use as raw context."""
     url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit={limit}"
     # Reddit strictly requires a custom User-Agent to prevent blocking
