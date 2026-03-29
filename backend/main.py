@@ -45,7 +45,7 @@ app.add_middleware(
 async def generate_board():
     try:
         # 1. Fetch live context
-        reddit_context = fetch_reddit_data("cscareerquestions")
+        reddit_context = fetch_reddit_data("AskReddit")
 
         # 2. Call OpenAI to generate the game board
         completion = await client.beta.chat.completions.parse(
