@@ -35,7 +35,7 @@ def fetch_reddit_data(subreddit: str = "AskReddit", limit: int = 15) -> str:
 # Allow frontend to communicate with backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"], # Default Vite port
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
