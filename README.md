@@ -35,3 +35,11 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 # Create a .env file with: OPENAI_API_KEY=your_key_here
 uvicorn main:app --reload
+```
+
+### 2. Frontend
+```bash
+cd frontend
+npm install
+# Ensure VITE_API_URL is set to http://localhost:8000/api in your environment
+npm run dev
